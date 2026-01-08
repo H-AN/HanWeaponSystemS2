@@ -63,7 +63,7 @@ public class HanWeaponSystemHelpers
                 ws.DropWeaponBySlot(gear_slot_t.GEAR_SLOT_GRENADES);
                 break;
             default:
-                _logger.LogError("slot 错误!!");
+                _logger.LogError("slot Error!!");
                 return;
         }
 
@@ -74,7 +74,7 @@ public class HanWeaponSystemHelpers
         var weapon = Is.GiveItem<CCSWeaponBase>(classname);
         if (weapon == null || !weapon.IsValid)
         {
-            _logger.LogError("创建失败: {ClassName}", classname);
+            _logger.LogError("Create Error: {ClassName}", classname);
             return;
         }
         weapon.AcceptInput("ChangeSubclass", vdataname);
@@ -237,4 +237,5 @@ public class HanWeaponSystemHelpers
     }
 
 }
+
 
