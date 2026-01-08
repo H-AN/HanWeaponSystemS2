@@ -17,9 +17,9 @@ namespace HanWeaponSystemS2;
 [PluginMetadata(
     Id = "HanWeaponSystemS2",
     Version = "1.5.0",
-    Name = "H-AN 武器系统/H-AN WeaponSystem for Sw2",
+    Name = "H-AN 姝﹀櫒绯荤粺/H-AN WeaponSystem for Sw2",
     Author = "H-AN",
-    Description = "CS2 武器系统/CS2 WeaponSystem")]
+    Description = "CS2 姝﹀櫒绯荤粺/CS2 WeaponSystem")]
 public partial class HanWeaponSystemS2(ISwiftlyCore core) : BasePlugin(core)
 {
     private ServiceProvider? ServiceProvider { get; set; }
@@ -60,7 +60,7 @@ public partial class HanWeaponSystemS2(ISwiftlyCore core) : BasePlugin(core)
         CFGMonitor.OnChange(newConfig =>
         {
             _WeaponCFG = newConfig;
-            Core.Logger.LogInformation("[H-AN] 武器系统配置文件已热重载并同步。");
+            Core.Logger.LogInformation("[HanWeaponSystemS2] The weapon system configuration file has been hot-reloaded and synchronized.");
         });
 
         _Service.RegisterCommand();
@@ -75,5 +75,6 @@ public partial class HanWeaponSystemS2(ISwiftlyCore core) : BasePlugin(core)
 
 
  
+
 
 }
