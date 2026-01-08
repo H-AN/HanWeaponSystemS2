@@ -12,6 +12,7 @@ using static HanWeaponSystemS2.HanWeaponSystemHelpers;
 
 
 namespace HanWeaponSystemS2;
+
 public class HanWeaponSystemHelpers
 {
     private readonly ILogger<HanWeaponSystemHelpers> _logger;
@@ -25,10 +26,10 @@ public class HanWeaponSystemHelpers
 
     public class WeaponData
     {
-        public int ClipSize { get; set; }       
-        public int ReserveAmmo { get; set; }  
+        public int ClipSize { get; set; }
+        public int ReserveAmmo { get; set; }
     }
-    public void GiveWeaponAndSkin(IPlayer player, HanWeaponSystemConfig.Weapons datas)
+    public void GiveWeaponAndSkin(IPlayer player, HanWeaponSystemConfig.Weapons datas)//string classname, string vdataname, string customname, int slot, int definition, int maxclip, int reserveammo, float Rate, string path
     {
         var pawn = player.PlayerPawn;
         if (pawn == null || !pawn.IsValid)
@@ -63,7 +64,7 @@ public class HanWeaponSystemHelpers
                 ws.DropWeaponBySlot(gear_slot_t.GEAR_SLOT_GRENADES);
                 break;
             default:
-                _logger.LogError("slot ´íÎó!!");
+                _logger.LogError("slot 错误!!");
                 return;
         }
 
@@ -74,7 +75,7 @@ public class HanWeaponSystemHelpers
         var weapon = Is.GiveItem<CCSWeaponBase>(classname);
         if (weapon == null || !weapon.IsValid)
         {
-            _logger.LogError("´´½¨Ê§°Ü: {ClassName}", classname);
+            _logger.LogError("创建失败: {ClassName}", classname);
             return;
         }
         weapon.AcceptInput("ChangeSubclass", vdataname);
@@ -107,7 +108,7 @@ public class HanWeaponSystemHelpers
             }
         }
     }
-    
+
 
     public (char operation, float value) ParseDamageOperation(string damageConfig)
     {
@@ -155,7 +156,7 @@ public class HanWeaponSystemHelpers
         }
         else
         {
-            // ÎÞ·ûºÅ ¡ú Ä¬ÈÏ +
+            // 无符号 → 默认 +
             operation = '+';
             valueStr = rateConfig;
         }
@@ -237,4 +238,3 @@ public class HanWeaponSystemHelpers
     }
 
 }
-
