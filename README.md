@@ -90,6 +90,8 @@
 	]
 	}
 }</code></pre>
+<p>武器元数据对照表查看/Weapon metadata lookup table</p>
+<p>https://github.com/H-AN/CS2WeaponCode/blob/main/Code</p>
 </div>
 <div class="section">
 
