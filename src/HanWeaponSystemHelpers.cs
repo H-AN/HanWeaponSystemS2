@@ -29,8 +29,7 @@ public class HanWeaponSystemHelpers
         public int ClipSize { get; set; }
         public int ReserveAmmo { get; set; }
     }
-    public void GiveWeaponAndSkin(IPlayer player, HanWeaponSystemConfig.Weapons datas)//string classname, string vdataname, string customname, int slot, int definition, int maxclip, int reserveammo, float Rate, string path
-    {
+    public void GiveWeaponAndSkin(IPlayer player, HanWeaponSystemConfig.Weapons datas)
         var pawn = player.PlayerPawn;
         if (pawn == null || !pawn.IsValid)
             return;
@@ -238,3 +237,4 @@ public class HanWeaponSystemHelpers
     }
 
 }
+
