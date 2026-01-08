@@ -127,7 +127,7 @@ Finally, fill the required information into HanWeaponSystemConfig.jsonc accordin
 	        "VdataName": "weapon_awp_plus8",     //VData identifier. Fill this according to the custom weapon configuration you defined.
 	        "Definition": 9,    //Weapon definition index. Can use the original index (e.g., MP5SD = 23) or reuse another weapon’s data to create mixed behaviors.
 	        "Damage": "+100",    //Damage modifier. Supports operators + - * /. Without an operator, “+” is used by default.
-			    "knock": "500",    //Knockback force applied on hit.
+			"knock": "500",    //Knockback force applied on hit.
 	        "MaxClip": 10,    //Magazine size.
 	        "ReserveAmmo": 1000,    //Ammo reserve amount.
 	        "Rate": 1.0,    //Attack interval. The smaller the value, the faster the fire rate.
