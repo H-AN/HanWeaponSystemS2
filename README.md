@@ -149,6 +149,7 @@ Finally, fill the required information into HanWeaponSystemConfig.jsonc accordin
 <h2>注意事项/Precautions</h2>
 <p>由于武器实体数据无法被热更新,所以插件配置热重载无效!!</p>
 <p>Because weapon entity data cannot be hot-updated, hot reloading of plugin configurations is ineffective!</p>
+<p>武器使用自定义隐藏指令进行发放,请妥善保管自己的隐藏指令密码防止泄露!!</p>
 <p>This plugin uses hidden commands for weapon spawning, so please do not reveal your password commands.</p>
 <p></p>
 </div>
