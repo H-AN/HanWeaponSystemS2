@@ -17,7 +17,7 @@
 <h2>视频预览/video</h2>
 <ul>
     <li><strong>https://www.bilibili.com/video/BV1dPqKBeEXf</strong></li>
-    <li><strong>https://www.youtube.com/watch?v=CeNDiYo2XsI&t=27s</strong></li>
+    <li><strong>https://www.youtube.com/watch?v=CeNDiYo2XsI&t</strong></li>
 </ul>
 </div>
 
