@@ -14,6 +14,14 @@
 </div>
 
 <div class="section">
+<h2>视频预览/video</h2>
+<ul>
+    <li><strong>https://www.bilibili.com/video/BV1dPqKBeEXf</strong></li>
+    <li><strong>https://www.youtube.com/watch?v=CeNDiYo2XsI&t=27s</strong></li>
+</ul>
+</div>
+
+<div class="section">
 <h2>功能特点/Features</h2>
 <ul>
     <li>支持 <strong>支持自定义模型皮肤</strong></li>
