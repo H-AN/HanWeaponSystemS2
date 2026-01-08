@@ -34,6 +34,48 @@
 </div>
 
 <div class="section">
+<h2>示例创意工坊文件(含模型与vdata)</h2>
+<h2>Example Workshop files (including models and vdata)</h2>
+<pre><code>
+	
+插件可结合以下创意工坊资源使用（示例）/The plugin can be used in conjunction with the following Workshop resources (examples)：
+
+3450081072
+
+要使用创意工坊资源,需要服务器安装metamod插件 multiaddonmanager 来管理服务器和玩家使用下载和安装创意工坊资源
+
+安装multiaddonmanager插件后 在game\csgo\cfg\multiaddonmanager\multiaddonmanager.cfg配置文件中
+ 
+找到第一行 mm_extra_addons  "3450081072"
+
+把资源ID填写上去 等待服务器下载资源完毕 玩家进服会自动下载资源
+
+之后用 Source2Viewer 软件 打开资源包 查看资源内的 模型路径与vdata
+
+之后根据需要填写到HanWeaponSystemConfig.jsonc内使用
+
+To use Workshop resources, the server needs to install the Metamod plugin multiaddonmanager to manage downloading and installing Workshop content for both the server and players.
+
+After installing the multiaddonmanager plugin, go to the configuration file:
+
+game\csgo\cfg\multiaddonmanager\multiaddonmanager.cfg
+
+Find the first line:
+
+mm_extra_addons "3450081072"
+
+Enter the Workshop resource ID here.
+After that, wait for the server to finish downloading the resource. When players join the server, the content will be downloaded automatically.
+
+Then use the Source2Viewer tool to open the resource package and check the model paths and VData inside.
+
+Finally, fill the required information into HanWeaponSystemConfig.jsonc according to your needs.
+
+</code></pre>
+</div>
+<div class="section">
+	
+<div class="section">
 <h2>制作自定义武器需要使用Vdata文件</h2>
 <h2>Creating custom weapons requires using Vdata files.</h2>
 <pre><code>
