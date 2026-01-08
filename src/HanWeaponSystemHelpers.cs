@@ -28,7 +28,7 @@ public class HanWeaponSystemHelpers
         public int ClipSize { get; set; }       
         public int ReserveAmmo { get; set; }  
     }
-    public void GiveWeaponAndSkin(IPlayer player, HanWeaponSystemConfig.Weapons datas)//string classname, string vdataname, string customname, int slot, int definition, int maxclip, int reserveammo, float Rate, string path
+    public void GiveWeaponAndSkin(IPlayer player, HanWeaponSystemConfig.Weapons datas)
     {
         var pawn = player.PlayerPawn;
         if (pawn == null || !pawn.IsValid)
@@ -63,7 +63,7 @@ public class HanWeaponSystemHelpers
                 ws.DropWeaponBySlot(gear_slot_t.GEAR_SLOT_GRENADES);
                 break;
             default:
-                _logger.LogError("slot ´íÎó!!");
+                _logger.LogError("slot Â´Ã­ÃÃ³!!");
                 return;
         }
 
@@ -74,7 +74,7 @@ public class HanWeaponSystemHelpers
         var weapon = Is.GiveItem<CCSWeaponBase>(classname);
         if (weapon == null || !weapon.IsValid)
         {
-            _logger.LogError("´´½¨Ê§°Ü: {ClassName}", classname);
+            _logger.LogError("Â´Â´Â½Â¨ÃŠÂ§Â°Ãœ: {ClassName}", classname);
             return;
         }
         weapon.AcceptInput("ChangeSubclass", vdataname);
@@ -155,7 +155,7 @@ public class HanWeaponSystemHelpers
         }
         else
         {
-            // ÎŞ·ûºÅ ¡ú Ä¬ÈÏ +
+            // ÃÃÂ·Ã»ÂºÃ… Â¡Ãº Ã„Â¬ÃˆÃ +
             operation = '+';
             valueStr = rateConfig;
         }
@@ -237,3 +237,4 @@ public class HanWeaponSystemHelpers
     }
 
 }
+
