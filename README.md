@@ -78,23 +78,23 @@
     		"PrecacheModel": "phase2/weapons/aquaz/_hoshics/slot1/ak47doom/ak47doom_ag2.vmdl",     //预缓存自定义模型 要与 m_szModel_AG2 一致
     		"PrecacheSoundEvent": "soundevents/soundevents_customweapon.vsndevts"     //预缓存声音事件 (由于cs2开枪音效由模型定义,声音事件驱动,需要模型搭配使用)
 		},
-    {
-        "CustomName": "AS50狙击步枪",    //Custom display name for UI and weapon attribute definitions.
-        "Command": "sw_sb2YWrszaUeZkbfx",    //Server-side custom command used to create this weapon (keep it secret).
-        "ClassName": "weapon_awp",    //Base weapon class template. Used to spawn the original weapon before applying custom model.
-        "VdataName": "weapon_awp_plus8",     //VData identifier. Fill this according to the custom weapon configuration you defined.
-        "Definition": 9,    //Weapon definition index. Can use the original index (e.g., MP5SD = 23) or reuse another weapon’s data to create mixed behaviors.
-        "Damage": "+100",    //Damage modifier. Supports operators + - * /. Without an operator, “+” is used by default.
-		    "knock": "500",    //Knockback force applied on hit.
-        "MaxClip": 10,    //Magazine size.
-        "ReserveAmmo": 1000,    //Ammo reserve amount.
-        "Rate": 1.0,    //Attack interval. The smaller the value, the faster the fire rate.
-        "NoRecoil": false,    //Whether to enable zero recoil.
-        "KillIcon": "weapon_awp",    //Kill-feed icon to display when this weapon kills a player.
-        "Slot": 0,    //Weapon slot. 0 = primary, 1 = pistol, 2 = knife, 3 = grenades.
-        "PrecacheModel": "phase2/weapons/7ychu5/_hoshics/slot1/as50_dummy/as50.vmdl",    //Custom weapon model that must be precached. Must match the m_szModel_AG2 model used by the weapon.
-        "PrecacheSoundEvent": "soundevents/as50.vsndevts"    //Precache sound event file. CS2 firing sounds are controlled by models and sound events, so the custom model must include its sound definitions.
-      }
+	    {
+	        "CustomName": "AS50狙击步枪",    //Custom display name for UI and weapon attribute definitions.
+	        "Command": "sw_sb2YWrszaUeZkbfx",    //Server-side custom command used to create this weapon (keep it secret).
+	        "ClassName": "weapon_awp",    //Base weapon class template. Used to spawn the original weapon before applying custom model.
+	        "VdataName": "weapon_awp_plus8",     //VData identifier. Fill this according to the custom weapon configuration you defined.
+	        "Definition": 9,    //Weapon definition index. Can use the original index (e.g., MP5SD = 23) or reuse another weapon’s data to create mixed behaviors.
+	        "Damage": "+100",    //Damage modifier. Supports operators + - * /. Without an operator, “+” is used by default.
+			    "knock": "500",    //Knockback force applied on hit.
+	        "MaxClip": 10,    //Magazine size.
+	        "ReserveAmmo": 1000,    //Ammo reserve amount.
+	        "Rate": 1.0,    //Attack interval. The smaller the value, the faster the fire rate.
+	        "NoRecoil": false,    //Whether to enable zero recoil.
+	        "KillIcon": "weapon_awp",    //Kill-feed icon to display when this weapon kills a player.
+	        "Slot": 0,    //Weapon slot. 0 = primary, 1 = pistol, 2 = knife, 3 = grenades.
+	        "PrecacheModel": "phase2/weapons/7ychu5/_hoshics/slot1/as50_dummy/as50.vmdl",    //Custom weapon model that must be precached. Must match the m_szModel_AG2 model used by the weapon.
+	        "PrecacheSoundEvent": "soundevents/as50.vsndevts"    //Precache sound event file. CS2 firing sounds are controlled by models and sound events, so the custom model must include its sound definitions.
+	      }
 	]
 	}
 }</code></pre>
