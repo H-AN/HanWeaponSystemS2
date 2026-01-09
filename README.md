@@ -164,5 +164,17 @@ https://github.com/H-AN/SimpleGiveFreeCustomWeaponMenu-example-
 <p></p>
 </div>
 
+<div class="section">
+<h2>关于自定义武器音效与动画的说明/Instructions on Custom Weapon Sound Effects and Animations</h2>
+<p>1.由于CS2更新了AG2所以自定义动画暂时无法使用/Custom animations are temporarily unavailable due to the AG2 update in CS2.</p>
+<p>2.自定义音效原理/Custom sound effects principle</p>
+<p>①通过在vdata中将CS2原版武器的所有音量改为 0 以屏蔽所有原始武器开枪音效/This disables all original weapon firing sounds by changing the volume of all original CS2 weapons to 0 in vdata.</p>
+<p><img width="581" height="634" alt="sound1" src="https://github.com/user-attachments/assets/366ed204-ff16-4406-8604-f1ea70e27d7c" /></p>
+<p>②模型作者在武器动画中增加AE_CL_PLAYSOUND事件,事件为soundevent文件内定义的事件音效/The model creator added the AE_CL_PLAYSOUND event to the weapon animation; this event is a sound effect defined in the soundevent file.</p>
+<p><img width="510" height="393" alt="sound2" src="https://github.com/user-attachments/assets/8cb461da-099b-47ec-8898-1c2c05c6dd3c" /></p>
+<p>当模型中动画定义了音效,玩家使用武器的时候动画播放驱动声音事件播放音效(所以我们需要在插件中预缓存声音事件,声音事件中定义的就是这把武器的各项音效)</p>
+<p>When the model's animations define sound effects, the animation plays when the player uses the weapon, driving the sound events to play the sound effects (so we need to pre-cachate sound events in the plugin, and the sound events define the various sound effects for this weapon).</p>
+</div>
+
 
 
