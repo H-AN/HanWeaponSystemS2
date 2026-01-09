@@ -153,3 +153,16 @@ Finally, fill the required information into HanWeaponSystemConfig.jsonc accordin
 <p>This plugin uses hidden commands for weapon spawning, so please do not reveal your password commands.</p>
 <p></p>
 </div>
+
+<div class="section">
+<h2>武器发放例子/Examples of weapons distribution</h2>
+<p>你可以通过这个菜单例子,对武器进行发放操作</p>
+<p>You can use this menu example to dispense weapons.</p>
+---
+https://github.com/H-AN/SimpleGiveFreeCustomWeaponMenu-example-
+---
+<p></p>
+</div>
+
+
+
