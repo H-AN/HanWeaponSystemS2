@@ -167,6 +167,11 @@ https://github.com/H-AN/SimpleGiveFreeCustomWeaponMenu-example-
 <div class="section">
 <h2>关于自定义武器音效与动画的说明/Instructions on Custom Weapon Sound Effects and Animations</h2>
 <p>1.由于CS2更新了AG2所以自定义动画暂时无法使用/Custom animations are temporarily unavailable due to the AG2 update in CS2.</p>
+</div>
+
+<div class="section">
+<h2>由于valve暂未公开AG2框架的编译器,所以模型暂时无法添加声音事件,或许未来valve公开编译器后此方法才可以使用</h2>
+<h2>Since Valve has not yet released the compiler for the AG2 framework, sound events cannot be added to the model for the time being. This method may be available once Valve releases the compiler in the future.</h2>
 <p>2.自定义音效原理/Custom sound effects principle</p>
 <p>①通过在vdata中将CS2原版武器的所有音量改为 0 以屏蔽所有原始武器开枪音效/This disables all original weapon firing sounds by changing the volume of all original CS2 weapons to 0 in vdata.</p>
 <p><img width="581" height="634" alt="sound1" src="https://github.com/user-attachments/assets/366ed204-ff16-4406-8604-f1ea70e27d7c" /></p>
