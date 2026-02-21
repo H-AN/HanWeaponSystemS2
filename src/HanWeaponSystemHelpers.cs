@@ -30,6 +30,7 @@ public class HanWeaponSystemHelpers
         public int ReserveAmmo { get; set; }
     }
     public void GiveWeaponAndSkin(IPlayer player, HanWeaponSystemConfig.Weapons datas)
+    { 
         var pawn = player.PlayerPawn;
         if (pawn == null || !pawn.IsValid)
             return;
