@@ -185,7 +185,7 @@ public class HanWeaponSystemHookEvent
             return;
         
 
-        var AttackerPlayer = _helpers.GetPlayerByController(AttackerController, _core);
+        var AttackerPlayer = _core.PlayerManager.GetPlayerFromController(AttackerController);
         if (AttackerPlayer == null || !AttackerPlayer.IsValid)
             return;
         

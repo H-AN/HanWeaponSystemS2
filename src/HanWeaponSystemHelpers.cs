@@ -1,4 +1,3 @@
-using System.Numerics;
 using System.Xml.Linq;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -84,8 +83,9 @@ public class HanWeaponSystemHelpers
         weapon.AttributeManager.Item.CustomNameOverride = customname;
         if (weapon.AttributeManager.Item.CustomName == customname)
         {
-            weapon.AttributeManager.Item.ItemDefinitionIndex = (ushort)definition;
 
+            weapon.AttributeManager.Item.ItemDefinitionIndex = (ushort)definition;
+            
             var WeaponBase = weapon.WeaponBaseVData;
             if (WeaponBase.IsValid)
             {
@@ -93,7 +93,13 @@ public class HanWeaponSystemHelpers
                 WeaponBase.SecondaryReserveAmmoMax = reserveammo;
                 WeaponBase.CycleTime.Values[0] = rate;
                 WeaponBase.CycleTime.Values[1] = rate;
+                WeaponBase.DefaultClip1 = maxclip;
+                WeaponBase.MaxClip1 = maxclip;
+
+                WeaponBase.DefaultClip2 = reserveammo;
+                WeaponBase.MaxClip2 = reserveammo;
             }
+
 
             var PlayerWeaponBase = weapon.PlayerWeaponVData;
             if (PlayerWeaponBase.IsValid)
@@ -106,6 +112,8 @@ public class HanWeaponSystemHelpers
                 weapon.Clip2 = reserveammo;
                 weapon.Clip2Updated();
             }
+            
+
         }
     }
 
@@ -180,63 +188,26 @@ public class HanWeaponSystemHelpers
         if (force <= 0)
             return;
 
-        var KnockBack = CalculateKnockbackDirection(attakcer, target, force);
-
-        var pawn = target.PlayerPawn;
-        if (pawn == null || !pawn.IsValid)
+        var attakcerpawn = attakcer.PlayerPawn;
+        if (attakcerpawn == null || !attakcerpawn.IsValid)
             return;
 
-        pawn.AbsVelocity = KnockBack;
+        var Rotation = attakcerpawn.AbsRotation;
+        if (Rotation == null)
+            return;
+
+        QAngle Angle = Rotation.Value;
+        Angle.ToDirectionVectors(out Vector vecKnockback, out _, out _);
+        var pushVelocity = vecKnockback * force;
+
+        var targetPawn = target.PlayerPawn;
+        if (targetPawn == null || !targetPawn.IsValid)
+            return;
+
+        var vel = targetPawn.AbsVelocity;
+        targetPawn.Teleport(null, null, vel + pushVelocity);
     }
-    public SwiftlyS2.Shared.Natives.Vector CalculateKnockbackDirection(IPlayer attacker, IPlayer target, float force)
-    {
-        if (!attacker.IsValid)
-            return new SwiftlyS2.Shared.Natives.Vector(0, 0, 0);
-
-        var attackerpawn = attacker.PlayerPawn;
-        if (attackerpawn == null || !attackerpawn.IsValid)
-            return new SwiftlyS2.Shared.Natives.Vector(0, 0, 0);
-
-        var attackerPos = attackerpawn.AbsOrigin;
-        if (attackerPos == null)
-            return new SwiftlyS2.Shared.Natives.Vector(0, 0, 0);
-
-        var targetpawn = target.PlayerPawn;
-        if (targetpawn == null || !targetpawn.IsValid)
-            return new SwiftlyS2.Shared.Natives.Vector(0, 0, 0);
-
-        var targetPos = targetpawn.AbsOrigin;
-        if (targetPos == null)
-            return new SwiftlyS2.Shared.Natives.Vector(0, 0, 0);
-
-        var dir = new SwiftlyS2.Shared.Natives.Vector(
-            targetPos.Value.X - attackerPos.Value.X,
-            targetPos.Value.Y - attackerPos.Value.Y,
-            targetPos.Value.Z - attackerPos.Value.Z
-        );
-
-        float length = MathF.Sqrt(dir.X * dir.X + dir.Y * dir.Y + dir.Z * dir.Z);
-        if (length <= 0.01f) return new SwiftlyS2.Shared.Natives.Vector(0, 0, 0);
-
-        return new SwiftlyS2.Shared.Natives.Vector(
-            dir.X / length * force,
-            dir.Y / length * force,
-            50f
-        );
-    }
-
-
-
-    public IPlayer? GetPlayerBySteamID(ulong? SteamID, ISwiftlyCore core)
-    {
-        return core.PlayerManager.GetAllPlayers().FirstOrDefault(x => !x.IsFakeClient && x.SteamID == SteamID);
-    }
-
-    public IPlayer? GetPlayerByController(CCSPlayerController controller, ISwiftlyCore core)
-    {
-        return core.PlayerManager.GetPlayer((int)(controller.Index - 1));
-    }
-
+    
 }
 
 
