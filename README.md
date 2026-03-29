@@ -49,7 +49,6 @@
 <pre><code>
 	
 插件可结合以下创意工坊资源使用（示例）/The plugin can be used in conjunction with the following Workshop resources (examples)：
-(资源来源于 星社区,在此仅作为测试插件使用,测试插件后请于24小时删除|The resource is from Hoshi-Star and is used here only for testing purposes. Please delete it within 24 hours after testing.)
 3327753176
 
 要使用创意工坊资源,需要服务器安装metamod插件 multiaddonmanager 来管理服务器和玩家使用下载和安装创意工坊资源
