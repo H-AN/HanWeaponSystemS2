@@ -50,11 +50,7 @@
 	
 插件可结合以下创意工坊资源使用（示例）/The plugin can be used in conjunction with the following Workshop resources (examples)：
 
-鉴于模型版权方要求,武器模型示例已经不再提供,本插件适用于任何AG2武器模型,请自行寻找模型进行使用!
-
-Due to copyright restrictions, weapon model examples are no longer provided. This plugin is compatible with any AG2 weapon model;
-
-please find your own model to use!
+❗ 鉴于模型版权方要求,武器模型示例已经不再提供,本插件适用于任何AG2武器模型,请自行寻找模型进行使用!
 
 要使用创意工坊资源,需要服务器安装metamod插件 multiaddonmanager 来管理服务器和玩家使用下载和安装创意工坊资源
 
@@ -76,7 +72,9 @@ game\csgo\cfg\multiaddonmanager\multiaddonmanager.cfg
 
 Find the first line:
 
-mm_extra_addons "3450081072"
+❗ Due to copyright restrictions, weapon model examples are no longer provided. This plugin is compatible with any AG2 weapon model;
+
+please find your own model to use!
 
 Enter the Workshop resource ID here.
 After that, wait for the server to finish downloading the resource. When players join the server, the content will be downloaded automatically.
