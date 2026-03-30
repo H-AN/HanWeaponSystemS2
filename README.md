@@ -8,13 +8,7 @@
 
 <div align="center">
 
-<div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
-  <span>技术支持 / Powered by yumiai :</span>
-  <a href="https://yumi.chat:3000/">
-    <img src="https://yumi.chat:3000/logo.png" width="50">
-  </a>
-  <span>(最好的AI模型供应商 / Best AI model provider)</span>
-</div>
+
 
 ---
 
