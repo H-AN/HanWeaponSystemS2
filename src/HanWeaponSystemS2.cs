@@ -16,7 +16,7 @@ namespace HanWeaponSystemS2;
 
 [PluginMetadata(
     Id = "HanWeaponSystemS2",
-    Version = "1.5.0",
+    Version = "1.6.0",
     Name = "H-AN 武器系统/H-AN WeaponSystem for Sw2",
     Author = "H-AN",
     Description = "CS2 武器系统/CS2 WeaponSystem")]

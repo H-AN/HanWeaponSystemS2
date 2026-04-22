@@ -9,6 +9,6 @@
 		<PlatformTarget>x64</PlatformTarget>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="SwiftlyS2.CS2" Version="*" />
+		<PackageReference Include="SwiftlyS2.CS2" Version="1.2.4-beta.40" />
 	</ItemGroup>
 </Project>
