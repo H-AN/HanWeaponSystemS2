@@ -58,7 +58,7 @@ If you like this plugin, you can support me in the following ways. Thank you!
 
 安装multiaddonmanager插件后 在game\csgo\cfg\multiaddonmanager\multiaddonmanager.cfg配置文件中
  
-找到第一行 mm_extra_addons  "3450081072"
+找到第一行 mm_extra_addons  ""
 
 把资源ID填写上去 等待服务器下载资源完毕 玩家进服会自动下载资源
 
